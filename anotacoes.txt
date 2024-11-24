@@ -1,0 +1,101 @@
+DEPENDENCIAS
+--------------------------------------
+PACOTE          INSTALADOR
+projeto         yarn init -y
+
+servidor        yarn add express 
+                yarn add -D @types/express
+typescript      yarn add -D typescript
+reinicia 
+servidor        yarn add -D ts-node-dev
+
+status codes    yarn add -D http-status-codes
+
+variaveis       yarn add -D dotenv
+
+O Yup é, de forma geral, um construtor de schemas(esquemas) para análise e validação de valores em campos.
+                yarn install -S yup 
+
+pastas
+------------------------------------------
+src
+    controller
+    database
+    routes
+    shared
+    Server.ts
+index.ts
+
+
+https://www.youtube.com/watch?v=JDUhym0iEkY&list=PL29TaWXah3iaaXDFPgTHiFMBF6wQahurP&index=41
+
+npm init
+
+------------------------------------------------------
+dependencias
+
+dependencias -D = --save-dev do npm install
+
+npm add express
+npm add -D typescript
+npm add -D typescript @types/express
+    dowgrade npm i -D @types/express@4
+npm add -D ts-node-dev
+npx eslint --init
+
+yarn add -D http-status-codes
+yarn add -D dotenv
+
+para validacoes de dados:   npm install -S yup | yarn add yup@0.32.11
+
+compilar:     yarn tsc ./src
+antes gerar o arquivo tsconfig.ts yarn tsc --init
+
+
+testes: yarn add jest ts-jest @types/jest
+
+supertest: yarn add -D supertest @types/supertest
+
+fazer aplicacao rodar: node ./build/index.js
+
+knex: configuracao para banco de dados - 
+  yarn add knex
+  yarn add sqlite -D
+  yarn add sqlite3 -D
+  exemplo de comando: yarn knex --knexfile ./src/server/database/knex/Environment.ts migrate:make teste
+
+ecriptografia de senha:  
+  yarn add bcryptjs 
+  yarn add @types/bcryptjs
+
+yarn add jsonwebtoken
+yarn add @types/jsonwebtoken
+
+------------------------------------------------------
+criar as pastas e arquivos
+src
+src/server
+src/index.ts
+src/server/Server.ts
+
+
+// DO REPOSITORIO
+{
+  "name": "api-rest-node-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lucas Souza",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
