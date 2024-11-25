@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+  CustomersController,
   estimate,
   estimateValidation,
   MotoristasController,
@@ -37,6 +38,32 @@ router.delete(
   "/motoristas/:id",
   MotoristasController.deleteByIdValidation,
   MotoristasController.deleteById
+);
+
+router.get(
+  "/customers",
+  CustomersController.getAllValidation,
+  CustomersController.getAll
+);
+router.post(
+  "/customers",
+  CustomersController.createValidation,
+  CustomersController.create
+);
+router.get(
+  "/customers/:id",
+  CustomersController.getByIdValidation,
+  CustomersController.getById
+);
+router.put(
+  "/customers/:id",
+  CustomersController.updateByIdValidation,
+  CustomersController.updateById
+);
+router.delete(
+  "/customers/:id",
+  CustomersController.deleteByIdValidation,
+  CustomersController.deleteById
 );
 
 export { router };

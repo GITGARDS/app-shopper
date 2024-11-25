@@ -1,13 +1,13 @@
 import { ETableNames } from "../../ETableNames";
 import { Knex } from "../../knex";
-import { IMotorista } from "../../models";
+import { ICustomer } from "../../models";
 
 export const create = async (
-  motorista: Omit<IMotorista, "id">
+  customer: Omit<ICustomer, "id">
 ): Promise<number | Error> => {
   try {
-    const [result] = await Knex(ETableNames.motorista)
-      .insert(motorista)
+    const [result] = await Knex(ETableNames.customer)
+      .insert(customer)
       .returning("id");
 
     if (typeof result === "object") {
